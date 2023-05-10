@@ -1,0 +1,118 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    max-width: 1280;
+    margin:0 auto;
+}
+
+main::after{
+     content: '';
+     min-height: 100vh;
+     width: 100vw;
+     position: fixed;
+     top: 0;
+     left: 0;
+     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.2805497198879552) 51%, rgba(0,0,0,1) 100%);
+     z-index: -1;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-evenly;
+}
+
+.informacoes .logo{
+    max-width: 350px;
+    margin-bottom: 8px;
+}
+
+.informacoes .logo{
+    max-width: 1050px;
+    margin-bottom: 80px;
+}
+.informacoes .descricao{
+    width: 50%;
+    font-size: 24px;
+    color: white;
+    line-height: 24px;
+}
+
+.botoescarrosel{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.botoescarrosel .botao{
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-color: white;
+}
+
+.botoescarrosel .selecionado{
+    background-color: brown;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-color: white;
+}
+
+
+.menu-lateral{
+    position: fixed;
+    top: 450px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    filter: invert(1);
+}
+.menu-lateral .icone{
+    width: 70px;
+    transition: 0.3s ease-in-out;
+}
+
+.menu-lateral .icone:hover{
+    transform: scale(1.2);
+}
+
+.carrosel{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.carrosel .imagem{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: none;
+    animation: mudarImagem 0.7s;
+}
+
+.carrosel .ativa{
+    display:block;
+}
+
+@keyframes  mudarImagem{
+    from{
+         opacity: 0.85;
+    }
+    to{
+        opacity: 1;
+    }
+}
+body{
+    padding: 40px;
+}
+
+
+
